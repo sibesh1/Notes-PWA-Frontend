@@ -1,8 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Mono:wght@300&display=swap");
 
+html {
+  height: 100%;
+}
 body {
-  background-color: #fdecef;
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgba(255, 229, 168, 1) 0%,
+    rgba(251, 174, 222, 1) 100.7%
+  );
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 .Parent {
@@ -11,43 +23,72 @@ body {
 }
 
 h4 {
-  color: #747572;
+  color: #7367f0;
   font-family: "Lato", sans-serif;
 }
 p {
+  color: #7367f0;
   font-family: "Roboto Mono", monospace;
-}
-label {
-  font-family: "Lato", sans-serif;
-  color: salmon;
 }
 input {
   margin: 2px 0px 2px 5px;
 }
 button {
-  margin-right: 10px;
+  margin-right: 1rem;
   display: inline-block;
   border-radius: 10px;
   border-style: none;
-  background-color: #b098a4;
-  color: #632b30;
+  padding: 4px 12px;
+  outline: none;
+  background-color: #e7b5d0;
+  color: #7367f0;
 }
 .inputSubmit {
   border-radius: 10px;
   border-style: none;
-  background-color: #b098a4;
-  color: #632b30;
+  padding: 5px 12px;
+  outline: none;
+  background-color: #e7b5d0;
+  color: #7367f0;
 }
 .showImpButton {
-  max-width: 70px;
+  padding: 4px 22px;
+  max-width: 100px;
   margin: 5px auto;
 }
 .showImpButton:hover,
 .inputSubmit:hover,
 button:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .Form {
-  margin: auto;
+  margin: 0.8rem auto;
+}
+.Form label {
+  font-family: "Lato", sans-serif;
+  color: #7367f0;
+}
+.footer,
+a {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  color: #e9eeee;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+.footer h4 {
+  color: #e9eeee;
+  margin-bottom: 5px;
+}
+h4 {
+  margin-bottom: 0;
+}
+h4 {
+  max-width: 35vw;
+}
+.footer strong {
+  display: block;
+  margin-bottom: 7px;
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function AddNote(props) {
-  const url = "/api/notes";
+  const url = "http://localhost:3000/api/notes";
   const [newNote, setNote] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ function AddNote(props) {
     <div className="Form">
       <form onSubmit={handleSubmit}>
         <label>
-          Add Note:
+          <strong>Add New Note</strong>
           <input
             type="text"
             name="name"
