@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 function AddNote(props) {
-  const url = "api/notes";
+  const url = "http://localhost:3000/api/notes";
   const [newNote, setNote] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -7,7 +7,7 @@ import Footer from "./Footer";
 function ShowNote() {
   const [notes, setNotes] = useState([]);
   const [showAll, setShowAll] = useState(true);
-  const url = "api/notes";
+  const url = "http://localhost:3000/api/notes";
   useEffect(() => {
     axios.get(url).then((response) => {
       setNotes(response.data);

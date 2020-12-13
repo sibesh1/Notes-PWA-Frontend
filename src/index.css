@@ -75,23 +75,22 @@ button:hover {
 }
 .footer,
 a {
-  margin-top: 1rem;
+  margin-top: 1.4rem;
   padding-bottom: 1rem;
   color: #e05a39;
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 500;
 }
-.footer h4 {
-  margin-bottom: 5px;
-}
 h4 {
   margin-bottom: 0;
-}
-h4 {
   max-width: 35vw;
 }
-.footer strong {
+.footer p {
   display: block;
+  color: #e05a39;
   margin-bottom: 7px;
+}
+.footer a {
+  margin-right: 10px;
 }

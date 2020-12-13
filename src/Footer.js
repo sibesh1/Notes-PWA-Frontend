@@ -5,7 +5,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 function Footer() {
   return (
     <div className="footer">
-      <strong>Phonebook By Sibesh Behera</strong>
+      <p>Notes On The Go By Sibesh Behera</p>
       <a href="https://github.com/sibesh1" target="_blank" rel="noreferrer">
         <GitHubIcon className="icons" />
       </a>
