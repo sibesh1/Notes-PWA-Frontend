@@ -16,6 +16,7 @@ function ShowNote() {
 
   return (
     <div className="Parent">
+      <h1>Notes On The Go</h1>
       <AddNote setNotes={setNotes} notes={notes} />
       <button onClick={() => setShowAll(!showAll)} className="showImpButton">
         {showAll ? "Show Important Notes Only" : "Show All Notes"}
