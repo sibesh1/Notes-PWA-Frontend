@@ -1,29 +1,34 @@
 import React, { useState } from "react";
-import loginService from "./services/login.js";
-import setToken from "./AddNote";
+import axios from "axios";
+import { setToken } from "./AddNote";
 
+const baseUrl = "http://localhost:3000/api/login";
 function Login({ user, setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const login = async (credentials) => {
+    const response = await axios.post(baseUrl, credentials);
+    return response.data;
+  };
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const user_ = await loginService.login({
+      const user_ = await login({
         username,
         password,
       });
-      setToken(user_.token);
+      window.localStorage.setItem("loggedNoteappUser", JSON.stringify(user_));
       setUser(user_);
+      setToken(user_.token);
       setUsername("");
       setPassword("");
     } catch (exception) {
       console.log("Wrong credentials");
       setTimeout(() => {
-        console.log(null);
+        console.log(user);
       }, 5000);
     }
-    console.log("logging in with", username, password);
   };
 
   return (

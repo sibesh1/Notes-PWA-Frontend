@@ -3,12 +3,12 @@ import axios from "axios";
 
 let token = null;
 
-const setToken = (newToken) => {
+export const setToken = (newToken) => {
   token = `bearer ${newToken}`;
 };
 
-function AddNote(props) {
-  const url = "api/notes";
+export function AddNote(props) {
+  const url = "http://localhost:3000/api/notes";
   const [newNote, setNote] = useState("");
 
   const handleSubmit = (e) => {
@@ -44,5 +44,3 @@ function AddNote(props) {
     </div>
   );
 }
-
-export default { AddNote, setToken };
