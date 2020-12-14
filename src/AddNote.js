@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+let token = null;
+
+const setToken = (newToken) => {
+  token = `bearer ${newToken}`;
+};
+
 function AddNote(props) {
   const url = "api/notes";
   const [newNote, setNote] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const noteObject = {
@@ -11,7 +18,10 @@ function AddNote(props) {
       date: new Date(),
       important: Math.random() < 0.5,
     };
-    axios.post(url, noteObject).then((response) => {
+    const config = {
+      headers: { Authorization: token },
+    };
+    axios.post(url, noteObject, config).then((response) => {
       props.setNotes(props.notes.concat(response.data));
       setNote("");
     });
@@ -35,4 +45,4 @@ function AddNote(props) {
   );
 }
 
-export default AddNote;
+export default { AddNote, setToken };
