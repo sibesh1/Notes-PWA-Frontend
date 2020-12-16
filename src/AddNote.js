@@ -8,7 +8,7 @@ export const setToken = (newToken) => {
 };
 
 export function AddNote(props) {
-  const url = "http://localhost:3000/api/notes";
+  const url = "/api/notes";
   const [newNote, setNote] = useState("");
 
   const handleSubmit = (e) => {

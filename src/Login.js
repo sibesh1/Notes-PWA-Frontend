@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { setToken } from "./AddNote";
 
-const baseUrl = "http://localhost:3000/api/login";
+const baseUrl = "/api/login";
 function Login({ user, setUser }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
